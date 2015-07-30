@@ -30,7 +30,6 @@ Bing.prototype.getLinkAndClick = function(){
         var promise = driver.getTitle();
         promise.then(function(title){
             console.log("The title is " + title);
-            return title;
         });
     });
 }
