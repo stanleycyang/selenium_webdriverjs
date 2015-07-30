@@ -45,12 +45,9 @@ describe('Bing', function(){
 
         // SEARCH
         describe('Bing.search', function(){
-            beforeEach(function(done){
-                bing.search();
-                done();
-            });
 
             it('gets the right search result title', function(done){
+               bing.search();
                driver.getTitle().then(function(title){
                     expect(title).toBe('Hello world! - Bing');
                     done();
