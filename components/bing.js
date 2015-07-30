@@ -19,24 +19,20 @@ Bing.prototype.search = function(){
     driver.findElement(webdriver.By.name('go')).click();
 }
 
-Bing.prototype.findHelloWorldLink = function(){
-    return driver.findElements(webdriver.By.css('[href="https://en.wikipedia.org/wiki/Hello_world_program"]')).then(function(result){
-        return result[0];
+// Grab the first link of hello world
+Bing.prototype.getLinkAndClick = function(){
+    driver.findElements(webdriver.By.css('[href="http://www.helloworld.com/"]')).then(function(links){
+        // Say which link they found
+        console.log('Found', links.length, 'Hello world links');
+        // Click the link
+        links[0].click();
+        // Promise for title
+        var promise = driver.getTitle();
+        promise.then(function(title){
+            console.log("The title is " + title);
+            return title;
+        });
     });
-}
-
-Bing.prototype.clickTheLink = function(link){
-    link.click();
-}
-
-Bing.prototype.returnTitle = function(){
-    driver.getTitle().then(function(title){
-        return title;
-    });
-}
-
-Bing.prototype.wait = function(callback){
-    driver.wait(callback, 2000);
 }
 
 

@@ -4,14 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jasmine-node spec --autotest --watch ."
+    "test": "jasmine-node ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chromedriver": "^2.16.0",
-    "jasmine-node": "^1.14.5",
+    "jasmine-node": "2.0.0",
     "selenium-webdriver": "^2.46.1"
   }
 }

@@ -1,3 +1,4 @@
+var driver = require('./config/driver');
 var Bing = require('./components/bing');
 
 // Initialize new Bing object
@@ -9,5 +10,6 @@ bing.get();
 bing.typeInSearch('Hello world!');
 // Search the term
 bing.search();
-
+// Run the code
+bing.getLinkAndClick();
 
