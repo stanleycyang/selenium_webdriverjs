@@ -1,4 +1,4 @@
-#Basic Selenium WebdriverJS demo
+#Basic Selenium WebdriverJS demo ![Build passing](https://travis-ci.org/syang019/selenium_webdriverjs.svg?branch=master)
 
 ###Purpose
 
